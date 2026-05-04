@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>株式会社やず企画｜福岡市中央区天神の不動産会社</title>
+  <meta name="description" content="株式会社やず企画は、福岡市中央区天神を拠点とする宅地建物取引業者です。不動産売買の仲介や不動産に関するご相談に対応しています。">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="株式会社やず企画｜福岡市中央区天神の不動産会社">
+  <meta property="og:description" content="福岡市中央区天神を拠点とする宅地建物取引業者、株式会社やず企画の会社案内ページです。">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ja_JP">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:   #1a2a4a;
+      --accent: #2a5298;
+      --rule:   #c0c8d8;
+      --bg:     #f5f6f9;
+      --white:  #ffffff;
+      --text:   #1a1a1a;
+      --sub:    #444c5a;
+      --light:  #778090;
+      --serif: "Hiragino Mincho ProN", "Yu Mincho", "YuMincho", "MS PMincho", serif;
+      --sans:  "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", "YuGothic", "Meiryo", sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      font-weight: 400;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.85;
+      font-size: 17px;
+    }
+
+    /* ── ナビ ── */
+    header {
+      background: var(--navy);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 0 clamp(16px, 4vw, 48px);
+    }
+    .header-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+    }
+    .site-name {
+      font-family: var(--serif);
+      font-size: 18px;
+      font-weight: 700;
+      color: #fff;
+      text-decoration: none;
+      letter-spacing: 0.05em;
+    }
+    nav { display: flex; gap: 20px; }
+    nav a {
+      font-size: 14px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.75);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+    }
+    nav a:hover { color: #fff; }
+    @media (max-width: 560px) {
+      nav { display: none; }
+    }
+
+    /* ── ヒーロー ── */
+    .hero {
+      background: var(--navy);
+      border-bottom: 4px solid var(--accent);
+      padding: clamp(48px, 9vw, 88px) clamp(20px, 5vw, 56px) clamp(48px, 9vw, 80px);
+    }
+    .hero-inner { max-width: 960px; margin: 0 auto; }
+
+    .hero-eyebrow {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      color: rgba(255,255,255,0.4);
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+    .hero h1 {
+      font-family: var(--serif);
+      font-size: clamp(30px, 6vw, 48px);
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 0.06em;
+      line-height: 1.35;
+      margin-bottom: 14px;
+    }
+    .hero-sub {
+      font-size: 19px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 24px;
+      letter-spacing: 0.04em;
+    }
+    .hero-body {
+      font-size: 17px;
+      font-weight: 400;
+      color: rgba(255,255,255,0.8);
+      max-width: 580px;
+      line-height: 2;
+    }
+    .hero-badge {
+      display: inline-block;
+      margin-top: 28px;
+      font-size: 13px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.5);
+      border: 1px solid rgba(255,255,255,0.2);
+      padding: 7px 16px;
+      border-radius: 2px;
+      letter-spacing: 0.05em;
+    }
+
+    /* ── セクション共通 ── */
+    .section {
+      padding: clamp(44px, 8vw, 72px) clamp(20px, 5vw, 56px);
+    }
+    .section-white { background: var(--white); }
+    .section-gray  { background: var(--bg); }
+    .section-inner { max-width: 960px; margin: 0 auto; }
+
+    .section-eyebrow {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      color: var(--light);
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .section-title {
+      font-family: var(--serif);
+      font-size: clamp(22px, 3.5vw, 28px);
+      font-weight: 700;
+      color: var(--navy);
+      letter-spacing: 0.04em;
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 2px solid var(--rule);
+    }
+
+    /* ── ご挨拶 ── */
+    .greeting-body {
+      font-size: 17px;
+      font-weight: 400;
+      color: var(--text);
+      max-width: 660px;
+      line-height: 2.1;
+    }
+
+    /* ── 事業内容 ── */
+    .business-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 14px;
+    }
+    .business-list li {
+      background: var(--white);
+      border-left: 4px solid var(--accent);
+      padding: 16px 18px;
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    /* ── 会社概要テーブル ── */
+    .company-table { width: 100%; border-collapse: collapse; }
+    .company-table tr { border-bottom: 1px solid var(--rule); }
+    .company-table th {
+      text-align: left;
+      width: 160px;
+      padding: 18px 20px 18px 0;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--sub);
+      vertical-align: top;
+      white-space: nowrap;
+    }
+    .company-table td {
+      padding: 18px 0;
+      font-size: 17px;
+      font-weight: 400;
+      color: var(--text);
+      vertical-align: top;
+      line-height: 1.75;
+    }
+    @media (max-width: 480px) {
+      .company-table, .company-table tbody,
+      .company-table tr, .company-table th, .company-table td {
+        display: block; width: 100%;
+      }
+      .company-table tr { padding: 14px 0; }
+      .company-table th {
+        padding: 0 0 4px 0;
+        font-size: 13px;
+        color: var(--light);
+        white-space: normal;
+      }
+      .company-table td { padding: 0; font-size: 16px; }
+    }
+
+    /* ── お問い合わせ ── */
+    .contact-wrap {
+      background: var(--navy);
+      padding: clamp(44px, 8vw, 72px) clamp(20px, 5vw, 56px);
+      text-align: center;
+    }
+    .contact-inner { max-width: 960px; margin: 0 auto; }
+    .contact-wrap .section-eyebrow { color: rgba(255,255,255,0.35); }
+    .contact-wrap .section-title {
+      color: #fff;
+      border-bottom-color: rgba(255,255,255,0.15);
+    }
+    .contact-body {
+      font-size: 17px;
+      font-weight: 400;
+      color: rgba(255,255,255,0.72);
+      margin-bottom: 28px;
+    }
+    .tel-number {
+      display: inline-block;
+      font-family: var(--serif);
+      font-size: clamp(32px, 7vw, 46px);
+      font-weight: 700;
+      color: #fff;
+      text-decoration: none;
+      letter-spacing: 0.08em;
+      border-bottom: 3px solid var(--accent);
+      padding-bottom: 6px;
+    }
+    .tel-number:hover { opacity: 0.85; }
+    .tel-note {
+      font-size: 14px;
+      color: rgba(255,255,255,0.4);
+      margin-top: 16px;
+    }
+
+    /* ── フッター ── */
+    footer {
+      background: #111d2e;
+      padding: 24px clamp(20px, 5vw, 56px);
+      text-align: center;
+    }
+    footer p {
+      font-size: 13px;
+      color: rgba(255,255,255,0.3);
+      letter-spacing: 0.05em;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="#top" class="site-name">株式会社やず企画</a>
+    <nav>
+      <a href="#greeting">ご挨拶</a>
+      <a href="#business">事業内容</a>
+      <a href="#company">会社概要</a>
+      <a href="#contact">お問い合わせ</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero" id="top">
+  <div class="hero-inner">
+    <p class="hero-eyebrow">Real Estate · Fukuoka Tenjin</p>
+    <h1>株式会社やず企画</h1>
+    <p class="hero-sub">福岡市中央区天神の不動産会社</p>
+    <p class="hero-body">
+      株式会社やず企画は、福岡市中央区天神を拠点とする宅地建物取引業者です。
+      地域に根ざした不動産取引を通じて、売主様・買主様に対して
+      誠実な情報提供と丁寧な対応を行っています。
+    </p>
+    <span class="hero-badge">宅建業免許：福岡県知事(5)第15054号</span>
+  </div>
+</div>
+
+<div class="section section-white" id="greeting">
+  <div class="section-inner">
+    <p class="section-eyebrow">Greeting</p>
+    <h2 class="section-title">ご挨拶</h2>
+    <p class="greeting-body">
+      不動産取引では、正確な情報と信頼できる対応が何よりも大切です。<br>
+      株式会社やず企画は、福岡市中央区天神を拠点に、
+      売買・仲介に関するご相談に真摯に向き合ってまいります。
+    </p>
+  </div>
+</div>
+
+<div class="section section-gray" id="business">
+  <div class="section-inner">
+    <p class="section-eyebrow">Business</p>
+    <h2 class="section-title">事業内容</h2>
+    <ul class="business-list">
+      <li>不動産売買の仲介</li>
+      <li>不動産に関する相談対応</li>
+      <li>売主様・買主様への情報提供</li>
+      <li>取引に関する調整業務</li>
+    </ul>
+  </div>
+</div>
+
+<div class="section section-white" id="company">
+  <div class="section-inner">
+    <p class="section-eyebrow">Company</p>
+    <h2 class="section-title">会社概要</h2>
+    <table class="company-table">
+      <tbody>
+        <tr><th>会社名</th><td>株式会社やず企画</td></tr>
+        <tr><th>代表者</th><td>矢頭 宏</td></tr>
+        <tr><th>所在地</th><td>福岡県福岡市中央区天神4丁目1-18 第一サンビル4F</td></tr>
+        <tr><th>電話番号</th><td><a href="tel:0927412121" style="color:var(--accent);font-weight:600;text-decoration:none;">092-741-2121</a></td></tr>
+        <tr><th>宅建業免許</th><td>福岡県知事(5)第15054号</td></tr>
+        <tr><th>所属団体</th><td>公益社団法人 福岡県宅地建物取引業協会<br>公正取引協議会加盟業者</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="contact-wrap" id="contact">
+  <div class="contact-inner">
+    <p class="section-eyebrow">Contact</p>
+    <h2 class="section-title">お問い合わせ</h2>
+    <p class="contact-body">不動産に関するご相談は、お電話にてお問い合わせください。</p>
+    <a href="tel:0927412121" class="tel-number">092-741-2121</a>
+    <p class="tel-note">株式会社やず企画</p>
+  </div>
+</div>
+
+<footer>
+  <p>© 株式会社やず企画　宅建業免許：福岡県知事(5)第15054号</p>
+</footer>
+
+</body>
+</html>

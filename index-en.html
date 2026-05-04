@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yazu Kikaku Co., Ltd. | Real Estate Company in Fukuoka</title>
+  <meta name="description" content="Licensed real estate company based in Fukuoka, Japan. Providing brokerage and transaction support.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Yazu Kikaku Co., Ltd. | Real Estate Company in Fukuoka">
+  <meta property="og:description" content="Licensed real estate company based in Fukuoka, Japan. Providing brokerage and transaction support.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:   #1a2a4a;
+      --accent: #2a5298;
+      --rule:   #c8d2df;
+      --bg:     #f6f7fa;
+      --white:  #ffffff;
+      --text:   #1a1a1a;
+      --sub:    #505868;
+      --muted:  #8090a0;
+      --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      --serif: Georgia, "Times New Roman", serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      font-size: 17px;
+      font-weight: 400;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.75;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: var(--navy);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 0 clamp(20px, 5vw, 56px);
+    }
+    .header-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+    }
+    .site-name {
+      font-size: 16px;
+      font-weight: 700;
+      color: #fff;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+    nav { display: flex; gap: 24px; }
+    nav a {
+      font-size: 13px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      white-space: nowrap;
+      letter-spacing: 0.03em;
+    }
+    nav a:hover { color: #fff; }
+    @media (max-width: 580px) { nav { display: none; } }
+
+    /* ── HERO ── */
+    .hero {
+      background: var(--navy);
+      border-bottom: 4px solid var(--accent);
+      padding: clamp(52px, 9vw, 96px) clamp(20px, 5vw, 56px) clamp(52px, 9vw, 88px);
+    }
+    .hero-inner { max-width: 960px; margin: 0 auto; }
+
+    .hero-eyebrow {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      color: rgba(255,255,255,0.38);
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+    .hero h1 {
+      font-family: var(--serif);
+      font-size: clamp(28px, 5.5vw, 44px);
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 0.01em;
+      line-height: 1.3;
+      margin-bottom: 14px;
+    }
+    .hero-sub {
+      font-size: 19px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.65);
+      margin-bottom: 26px;
+      letter-spacing: 0.01em;
+    }
+    .hero-body {
+      font-size: 17px;
+      font-weight: 400;
+      color: rgba(255,255,255,0.78);
+      max-width: 580px;
+      line-height: 1.85;
+    }
+    .hero-badge {
+      display: inline-block;
+      margin-top: 28px;
+      font-size: 12px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.45);
+      border: 1px solid rgba(255,255,255,0.18);
+      padding: 7px 16px;
+      border-radius: 2px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    /* ── SECTIONS ── */
+    .section {
+      padding: clamp(44px, 8vw, 72px) clamp(20px, 5vw, 56px);
+    }
+    .section-white { background: var(--white); }
+    .section-gray  { background: var(--bg); }
+    .section-inner { max-width: 960px; margin: 0 auto; }
+
+    .section-eyebrow {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.24em;
+      color: var(--muted);
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .section-title {
+      font-family: var(--serif);
+      font-size: clamp(21px, 3.2vw, 27px);
+      font-weight: 700;
+      color: var(--navy);
+      letter-spacing: 0.01em;
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 2px solid var(--rule);
+    }
+    .section-body {
+      font-size: 17px;
+      font-weight: 400;
+      color: var(--text);
+      max-width: 640px;
+      line-height: 1.85;
+    }
+
+    /* ── COMPANY TABLE ── */
+    .company-table { width: 100%; border-collapse: collapse; }
+    .company-table tr { border-bottom: 1px solid var(--rule); }
+    .company-table th {
+      text-align: left;
+      width: 200px;
+      padding: 16px 20px 16px 0;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--sub);
+      vertical-align: top;
+      white-space: nowrap;
+    }
+    .company-table td {
+      padding: 16px 0;
+      font-size: 17px;
+      font-weight: 400;
+      color: var(--text);
+      vertical-align: top;
+      line-height: 1.7;
+    }
+    .company-table td .ja {
+      display: block;
+      font-size: 14px;
+      color: var(--muted);
+      margin-top: 3px;
+    }
+    @media (max-width: 480px) {
+      .company-table, .company-table tbody,
+      .company-table tr, .company-table th, .company-table td {
+        display: block; width: 100%;
+      }
+      .company-table tr { padding: 14px 0; }
+      .company-table th {
+        padding: 0 0 4px 0;
+        font-size: 12px;
+        color: var(--muted);
+        white-space: normal;
+      }
+      .company-table td { padding: 0; font-size: 16px; }
+    }
+
+    /* ── SERVICES ── */
+    .service-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 14px;
+    }
+    .service-list li {
+      background: var(--bg);
+      border-left: 4px solid var(--accent);
+      padding: 16px 20px;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text);
+      letter-spacing: 0.01em;
+    }
+
+    /* ── INTERNATIONAL NOTE ── */
+    .intl-box {
+      border: 1px solid var(--rule);
+      border-left: 4px solid var(--accent);
+      background: var(--white);
+      padding: 24px 28px;
+      max-width: 640px;
+    }
+    .intl-box p {
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--sub);
+      line-height: 1.85;
+    }
+
+    /* ── CONTACT ── */
+    .contact-wrap {
+      background: var(--navy);
+      padding: clamp(44px, 8vw, 72px) clamp(20px, 5vw, 56px);
+      text-align: center;
+    }
+    .contact-inner { max-width: 960px; margin: 0 auto; }
+    .contact-wrap .section-eyebrow { color: rgba(255,255,255,0.32); }
+    .contact-wrap .section-title {
+      color: #fff;
+      border-bottom-color: rgba(255,255,255,0.14);
+    }
+    .contact-body {
+      font-size: 17px;
+      color: rgba(255,255,255,0.68);
+      margin-bottom: 28px;
+    }
+    .tel-number {
+      display: inline-block;
+      font-family: var(--serif);
+      font-size: clamp(28px, 6vw, 42px);
+      font-weight: 700;
+      color: #fff;
+      text-decoration: none;
+      letter-spacing: 0.06em;
+      border-bottom: 3px solid var(--accent);
+      padding-bottom: 6px;
+    }
+    .tel-number:hover { opacity: 0.82; }
+    .tel-note {
+      font-size: 13px;
+      color: rgba(255,255,255,0.36);
+      margin-top: 16px;
+      letter-spacing: 0.05em;
+    }
+
+    /* ── LICENSE STRIP ── */
+    .license-strip {
+      background: #f0f2f5;
+      border-top: 1px solid var(--rule);
+      padding: 20px clamp(20px, 5vw, 56px);
+      text-align: center;
+    }
+    .license-strip p {
+      font-size: 13px;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #111d2e;
+      padding: 24px clamp(20px, 5vw, 56px);
+      text-align: center;
+    }
+    footer p {
+      font-size: 12px;
+      color: rgba(255,255,255,0.28);
+      letter-spacing: 0.05em;
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <a href="#top" class="site-name">Yazu Kikaku Co., Ltd.</a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#profile">Company</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="hero" id="top">
+  <div class="hero-inner">
+    <p class="hero-eyebrow">Licensed Real Estate · Fukuoka, Japan</p>
+    <h1>Yazu Kikaku Co., Ltd.</h1>
+    <p class="hero-sub">Licensed Real Estate Company in Fukuoka, Japan</p>
+    <p class="hero-body">
+      Yazu Kikaku Co., Ltd. is a licensed real estate company based in Tenjin, Fukuoka.
+      We provide brokerage and transaction support in accordance with Japanese real estate regulations.
+    </p>
+    <span class="hero-badge">Fukuoka Governor License (5) No. 15054</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<div class="section section-white" id="about">
+  <div class="section-inner">
+    <p class="section-eyebrow">About</p>
+    <h2 class="section-title">About</h2>
+    <p class="section-body">
+      We are a real estate company located in central Fukuoka.
+      Our focus is to provide accurate information and proper coordination for real estate transactions.
+    </p>
+  </div>
+</div>
+
+<!-- COMPANY PROFILE -->
+<div class="section section-gray" id="profile">
+  <div class="section-inner">
+    <p class="section-eyebrow">Company</p>
+    <h2 class="section-title">Company Profile</h2>
+    <table class="company-table">
+      <tbody>
+        <tr>
+          <th>Company Name</th>
+          <td>
+            Yazu Kikaku Co., Ltd.
+            <span class="ja">株式会社やず企画</span>
+          </td>
+        </tr>
+        <tr>
+          <th>Representative</th>
+          <td>Hiroshi Yagashira</td>
+        </tr>
+        <tr>
+          <th>Address</th>
+          <td>4-1-18 Tenjin, Chuo-ku, Fukuoka, Japan</td>
+        </tr>
+        <tr>
+          <th>Phone</th>
+          <td>
+            <a href="tel:+81927412121" style="color:var(--accent);font-weight:600;text-decoration:none;">
+              +81-92-741-2121
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <th>License Number</th>
+          <td>Fukuoka Governor (5) No. 15054</td>
+        </tr>
+        <tr>
+          <th>Affiliation</th>
+          <td>
+            Fukuoka Real Estate Transaction Association<br>
+            Fair Trade Council Member
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<div class="section section-white" id="services">
+  <div class="section-inner">
+    <p class="section-eyebrow">Services</p>
+    <h2 class="section-title">Services</h2>
+    <ul class="service-list">
+      <li>Real Estate Brokerage</li>
+      <li>Transaction Coordination</li>
+      <li>Property Information Support</li>
+    </ul>
+  </div>
+</div>
+
+<!-- INTERNATIONAL NOTE -->
+<div class="section section-gray" id="international">
+  <div class="section-inner">
+    <p class="section-eyebrow">International</p>
+    <h2 class="section-title">For International Buyers</h2>
+    <div class="intl-box">
+      <p>
+        For selected overseas buyers and partners, initial information
+        and coordination support can be provided upon request.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<div class="contact-wrap" id="contact">
+  <div class="contact-inner">
+    <p class="section-eyebrow">Contact</p>
+    <h2 class="section-title">Contact</h2>
+    <p class="contact-body">
+      For inquiries regarding real estate transactions, please contact us via phone.
+    </p>
+    <a href="tel:+81927412121" class="tel-number">+81-92-741-2121</a>
+    <p class="tel-note">Yazu Kikaku Co., Ltd. · Fukuoka, Japan</p>
+  </div>
+</div>
+
+<!-- LICENSE STRIP -->
+<div class="license-strip">
+  <p>
+    Licensed under Fukuoka Governor License (5) No. 15054 &nbsp;|&nbsp;
+    Member: Fukuoka Real Estate Transaction Association &nbsp;|&nbsp;
+    Fair Trade Council Member
+  </p>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>© Yazu Kikaku Co., Ltd. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
